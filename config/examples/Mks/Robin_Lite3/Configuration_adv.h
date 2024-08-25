@@ -21,6 +21,8 @@
  */
 #pragma once
 
+#define CONFIG_EXAMPLES_DIR "Mks/Robin_Lite3"
+
 /**
  * Configuration_adv.h
  *
@@ -305,8 +307,8 @@
  * THERMAL_PROTECTION_HYSTERESIS and/or THERMAL_PROTECTION_PERIOD
  */
 #if ALL(HAS_HOTEND, THERMAL_PROTECTION_HOTENDS)
-  #define THERMAL_PROTECTION_PERIOD 40        // (seconds)
-  #define THERMAL_PROTECTION_HYSTERESIS 4     // (°C)
+  #define THERMAL_PROTECTION_PERIOD        40 // (seconds)
+  #define THERMAL_PROTECTION_HYSTERESIS     4 // (°C)
 
   //#define ADAPTIVE_FAN_SLOWING              // Slow down the part-cooling fan if the temperature drops
   #if ENABLED(ADAPTIVE_FAN_SLOWING)
@@ -1580,7 +1582,7 @@
    * We encourage you to take advantage of this new feature and we also
    * respectfully request that you retain the unmodified Marlin boot screen.
    */
-  #define SHOW_BOOTSCREEN                 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
+  //#define SHOW_BOOTSCREEN               // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
   #if ENABLED(SHOW_BOOTSCREEN)
     #define BOOTSCREEN_TIMEOUT 3000       // (ms) Total Duration to display the boot screen(s)
     #if ANY(HAS_MARLINUI_U8GLIB, TFT_COLOR_UI)

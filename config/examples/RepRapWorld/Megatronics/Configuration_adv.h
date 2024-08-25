@@ -21,6 +21,8 @@
  */
 #pragma once
 
+#define CONFIG_EXAMPLES_DIR "RepRapWorld/Megatronics"
+
 /**
  * Configuration_adv.h
  *
@@ -305,8 +307,8 @@
  * THERMAL_PROTECTION_HYSTERESIS and/or THERMAL_PROTECTION_PERIOD
  */
 #if ALL(HAS_HOTEND, THERMAL_PROTECTION_HOTENDS)
-  #define THERMAL_PROTECTION_PERIOD 40        // (seconds)
-  #define THERMAL_PROTECTION_HYSTERESIS 4     // (°C)
+  #define THERMAL_PROTECTION_PERIOD        40 // (seconds)
+  #define THERMAL_PROTECTION_HYSTERESIS     4 // (°C)
 
   //#define ADAPTIVE_FAN_SLOWING              // Slow down the part-cooling fan if the temperature drops
   #if ENABLED(ADAPTIVE_FAN_SLOWING)
@@ -1674,11 +1676,11 @@
 
 // LCD Print Progress options. Multiple times may be displayed in turn.
 #if HAS_DISPLAY && ANY(HAS_MEDIA, SET_PROGRESS_MANUALLY)
-  #define SHOW_PROGRESS_PERCENT           // Show print progress percentage (doesn't affect progress bar)
-  #define SHOW_ELAPSED_TIME               // Display elapsed printing time (prefix 'E')
+  //#define SHOW_PROGRESS_PERCENT         // Show print progress percentage (doesn't affect progress bar)
+  //#define SHOW_ELAPSED_TIME             // Display elapsed printing time (prefix 'E')
   //#define SHOW_REMAINING_TIME           // Display estimated time to completion (prefix 'R')
   #if ENABLED(SET_INTERACTION_TIME)
-    #define SHOW_INTERACTION_TIME         // Display time until next user interaction ('C' = filament change)
+    //#define SHOW_INTERACTION_TIME       // Display time until next user interaction ('C' = filament change)
   #endif
   //#define PRINT_PROGRESS_SHOW_DECIMALS  // Show/report progress with decimal digits, not all UIs support this
 
